@@ -6,24 +6,24 @@ LABEL maintainer="xiechengqi01@gmail.com" \
 
 USER root
 
-ENV \
 # vnc resolution
+# novnc
+# gotty
+# chromium
+ENV \
 	DISPLAY=:0 \
 	VNC_RESOLUTION="1920x1080" \
 	VNC_PORT="5900" \
-# novnc
 	NOVNC_PASSWORD="123123" \
 	NOVNC_VIEW_ONLY="false" \
 	NOVNC_TITLE="Chromium" \
 	NOVNC_WEB_INDEX="/app/index" \
 	NOVNC_PORT="7900" \
-# gotty
         TERMINAL_PASSWORD="123123" \
-# chromium
 	CHROMIUM_CLEAN_SINGLETONLOCK="false" \
 	CHROMIUM_USER_DATA_DIR="/app/chromium/user-data" \
 	CHROMIUM_REMOTE_DEBUGGING_PORT="9222" \
-	CHROMIUM_START_URL="chrome://version" \
+	CHROMIUM_START_URLS="chrome://version,http://localhost:2222,http://localhost:5000" \
 	CHROMIUM_LANG="en-US" \
 	CHROMIUM_LOAD_EXTENSION="" \
 	CHROMIUM_PROXY_SERVER=""
