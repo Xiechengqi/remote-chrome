@@ -12,6 +12,7 @@ docker rm -f ${name}
 # -e NOVNC_PASSWORD="123123" \
 # -e TERMINAL_USER="admin" \
 # -e TERMINAL_PASSWORD="123123" \
+# -e CHROMIUM_PROXY_SERVER=socks5://192.168.1.15:1080
 
 docker run -itd \
   --restart=always \

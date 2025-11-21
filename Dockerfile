@@ -33,7 +33,7 @@ COPY app /app
 
 RUN     sed -i 's#https\?://dl-cdn.alpinelinux.org/alpine#https://mirrors.tuna.tsinghua.edu.cn/alpine#g' /etc/apk/repositories && \
         apk update && \
-        apk add --no-cache ca-certificates curl wget vim bash htop net-tools vnstat sed \
+        apk add --no-cache ca-certificates curl wget vim bash htop net-tools vnstat screen tmux sed \
         supervisor \
         xvfb \
         openbox \
