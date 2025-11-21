@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-/app/gotty/gotty -w -c admin:${TERMINAL_PASSWORD} -p 2222 /bin/sh
+[ ".${TERMINAL_USER}" != "." ] && [ ".${TERMINAL_PASSWORD}" != "." ] && OPTS="-c ${TERMINAL_USER}:${TERMINAL_PASSWORD}"
+/app/gotty/gotty -w -p 2222 ${OPTS} /bin/sh
