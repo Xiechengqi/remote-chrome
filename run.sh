@@ -17,4 +17,5 @@ docker run -itd \
   -p 7900:7900 \
   -v ${PWD}/scripts:/app/scripts \
   -v ${PWD}/user-data:/app/chromium/user-data \
+  -e CHROMIUM_CLEAN_SINGLETONLOCK=true \
   --name ${name} chrome-novnc:latest
